@@ -6,7 +6,8 @@
 TESTS = \
   tests/test
 EGS = \
-  eg/minimal
+  eg/minimal \
+  eg/should
 BENCHS =
 GHCIMPORTDIRS = src
 GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic)
@@ -15,7 +16,7 @@ HADDOCKFLAGS = --no-print-missing-docs \
 
 all: mk/toplibs
 
-all-all: mk/All.o
+all-all: mk/All.o $(TESTS) $(EGS)
 
 test: $(patsubst %,%.test,$(TESTS))
 

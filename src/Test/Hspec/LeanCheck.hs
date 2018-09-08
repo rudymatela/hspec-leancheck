@@ -54,10 +54,16 @@ where
 
 import Test.Hspec.Core.Spec
 import Test.LeanCheck
+import Test.LeanCheck.Core (resultiers)
+import Control.Exception (try)
+import System.IO.Unsafe (unsafePerformIO) -- LeanCheck is pure
+import qualified Test.HUnit.Lang as HUnit
+import Data.Maybe (fromMaybe)
 
 data Property = Ok
               | Failed String
 
+-- TODO: catch errors
 propertyWith :: Testable a => Int -> a -> Property
 propertyWith m p = case counterExample m p of
   Nothing -> Ok
@@ -71,3 +77,14 @@ instance Example Property where
                           $ case p of
                             Ok -> Success
                             Failed s -> Failure Nothing (Reason s)
+
+instance Testable (IO a) where
+  resultiers action = unsafePerformIO $ do
+    r <- try action
+    return . (:[]) . (:[]) $ case r of
+      Right _ -> ([],True)
+      Left (HUnit.HUnitFailure loc reason) ->
+        case reason of
+        HUnit.Reason s -> (["--", s],False)
+        HUnit.ExpectedButGot prefix expected actual ->
+          ([fromMaybe "" prefix, "--", "expected", expected, "but got", actual], False)
