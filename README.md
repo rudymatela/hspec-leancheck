@@ -18,7 +18,7 @@ Installing
 Example
 -------
 
-Here's how your `test.hs` might look like:
+Here's how your `spec.hs` might look like:
 
 ```haskell
 import Test.Hspec

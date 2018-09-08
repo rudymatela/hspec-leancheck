@@ -6,7 +6,7 @@
 --
 -- LeanCheck support for the Hspec test framework.
 --
--- Here's how your @test.hs@ might look like:
+-- Here's how your @spec.hs@ might look like:
 --
 -- > import Test.Hspec
 -- > import Test.Hspec.LeanCheck as LC
