@@ -32,6 +32,7 @@ extra-source-files: .gitignore
                   , mk/All.hs
                   , mk/Toplibs.hs
                   , stack.yaml
+                  , stack-lts-11.yaml
                   , tests/test-sdist
                   , .travis.yml
 tested-with: GHC==8.4
