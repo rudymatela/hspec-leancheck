@@ -23,6 +23,7 @@ extra-doc-files: README.md
                , TODO.md
 extra-source-files: .gitignore
                   , eg/minimal.hs
+                  , eg/should.hs
                   , Makefile
                   , mk/depend.mk
                   , mk/haskell.mk
