@@ -47,7 +47,7 @@
 -- for more details.
 module Test.Hspec.LeanCheck
   ( property
-  , propertyWith
+  , propertyFor
   , module Test.LeanCheck
   )
 where
@@ -64,8 +64,8 @@ data Property = Ok
               | Failed String
 
 -- | Like 'property' but allows setting the maximum number of tests.
-propertyWith :: Testable a => Int -> a -> Property
-propertyWith m p = case counterExample m p of
+propertyFor :: Testable a => Int -> a -> Property
+propertyFor m p = case counterExample m p of
   Nothing -> Ok
   Just ce -> Failed $ unwords ce
 -- TODO: catch errors above
@@ -80,7 +80,7 @@ propertyWith m p = case counterExample m p of
 -- >    it "is like this" $ property $ \y... -> ...
 -- >    ...
 property :: Testable a => a -> Property
-property = propertyWith 200
+property = propertyFor 200
 
 instance Example Property where
   evaluateExample p _ _ _ = return . Result ""
