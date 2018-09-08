@@ -52,7 +52,7 @@ source-repository this
 library
   exposed-modules:     Test.Hspec.LeanCheck
   hs-source-dirs:      src
-  build-depends:       base >= 4 && < 5, hspec, hspec-core, leancheck, HUnit
+  build-depends:       base >= 4 && < 5, hspec >= 2.5, hspec-core, leancheck, HUnit
   default-language:    Haskell2010
 
 test-suite test
