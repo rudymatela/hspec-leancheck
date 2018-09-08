@@ -4,6 +4,7 @@
 # License:     3-Clause BSD  (see the file LICENSE)
 # Maintainer:  Rudy Matela <rudy@matela.com.br>
 TESTS = \
+  tests/should \
   tests/test
 EGS = \
   eg/minimal \
@@ -22,6 +23,8 @@ test: $(patsubst %,%.test,$(TESTS))
 
 %.test: %
 	./$<
+
+eg: $(EGS)
 
 clean: clean-hi-o clean-haddock
 	rm -f $(TESTS) $(BENCHS) $(EGS) mk/toplibs

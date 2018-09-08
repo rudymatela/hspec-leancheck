@@ -14,6 +14,7 @@ doc/
 *.dyn_hi
 *.dyn_o
 tests/test
+tests/should
 doc/*.html
 doc/*.css
 doc/*.js
