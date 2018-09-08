@@ -88,6 +88,13 @@ instance Example Property where
                             Ok -> Success
                             Failed s -> Failure Nothing (Reason s)
 
+-- | Allows @should*@ to appear inside LeanCheck properties
+--
+--   Example:
+--
+-- > describe "sort" $ do
+-- >   it "is idempotent" $
+-- >     LC.property $ \xs -> sort (sort xs :: [Int]) `shouldBe` sort xs
 instance Testable (IO a) where
   resultiers action = unsafePerformIO $ do
     r <- try action
