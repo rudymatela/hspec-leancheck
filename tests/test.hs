@@ -18,6 +18,7 @@ spec = do
       LC.property $ \xs -> length (sort xs :: [Int]) == length xs
     it "preserves membership" $
       LC.property $ \x xs -> (x `elem` (sort xs :: [Int])) == (x `elem` xs)
+
   describe "sort (tested by propertyFor)" $ do
     it "is idempotent" $
       LC.propertyFor 2000 $ \xs -> sort (sort xs :: [Int]) == sort xs
@@ -25,3 +26,8 @@ spec = do
       LC.propertyFor 2000 $ \xs -> length (sort xs :: [Int]) == length xs
     it "preserves membership" $
       LC.propertyFor 2000 $ \x xs -> (x `elem` (sort xs :: [Int])) == (x `elem` xs)
+
+  describe "sort (tested by prop)" $ do
+    prop "idempotent" $ \xs   ->       sort (sort xs :: [Int]) == sort xs
+    prop "== length"  $ \xs   ->     length (sort xs :: [Int]) == length xs
+    prop "== `elem`"  $ \x xs -> (x `elem` (sort xs :: [Int])) == (x `elem` xs)

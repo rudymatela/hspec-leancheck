@@ -48,6 +48,7 @@
 module Test.Hspec.LeanCheck
   ( property
   , propertyFor
+  , prop
   , module Test.LeanCheck
   )
 where
@@ -89,6 +90,23 @@ propertyFor m p = case counterExample m p of
 -- >    ...
 property :: Testable a => a -> Property
 property = propertyFor 200
+
+-- | Allows a named LeanCheck 'Testable' property to appear in a Spec.
+--
+-- > prop "does so and so" $ ...
+--
+-- is a shortcut for
+--
+-- > it "does so an so" $ property $ ...
+--
+-- > spec :: Spec
+-- > spec = do
+-- >   describe "thing" $ do
+-- >    prop "is so and so" $ \x... -> ...
+-- >    prop "is like this" $ \y... -> ...
+-- >    ...
+prop :: Testable a => String -> a -> Spec
+prop s = it s . property
 
 instance Example Property where
   evaluateExample p _ _ _ = return . Result ""
