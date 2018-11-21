@@ -64,6 +64,14 @@ data Property = Ok
               | Failed String
 
 -- | Like 'property' but allows setting the maximum number of tests.
+--
+-- > spec :: Spec
+-- > spec = do
+-- >   describe "thing" $ do
+-- >    it "is so and so" $ propertyFor 100 $ \... -> ...
+-- >    it "is like this" $ propertyFor 200 $ \... -> ...
+-- >    it "does a thing" $ propertyFor 300 $ \... -> ...
+-- >    ...
 propertyFor :: Testable a => Int -> a -> Property
 propertyFor m p = case counterExample m p of
   Nothing -> Ok
