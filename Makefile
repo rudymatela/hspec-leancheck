@@ -4,8 +4,8 @@
 # License:     3-Clause BSD  (see the file LICENSE)
 # Maintainer:  Rudy Matela <rudy@matela.com.br>
 TESTS = \
-  tests/should \
-  tests/test
+  test/should \
+  test/test
 EGS = \
   eg/minimal \
   eg/should
@@ -35,7 +35,7 @@ install:
 	@echo "use \`cabal install' instead"
 
 test-sdist:
-	./tests/test-sdist
+	./test/sdist
 
 test-via-cabal:
 	cabal test
@@ -76,7 +76,7 @@ hlint:
 
 # NOTE: (very hacky!) the following target allows parallel compilation (-jN) of
 # eg and tests programs so long as they don't share dependencies _not_ stored
-# in src/ and tests/.  Runnable binaries should depend on mk/toplibs instead of
+# in src/ and test/.  Runnable binaries should depend on mk/toplibs instead of
 # actual Haskell source files
 mk/toplibs: mk/Toplibs.o
 	touch mk/toplibs

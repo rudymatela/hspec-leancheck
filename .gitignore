@@ -13,8 +13,8 @@ doc/
 *.hi
 *.dyn_hi
 *.dyn_o
-tests/test
-tests/should
+test/test
+test/should
 doc/*.html
 doc/*.css
 doc/*.js
