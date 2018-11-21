@@ -1,6 +1,6 @@
 -- Cabal file for hspec-leancheck
 name:                hspec-leancheck
-version:             0.0.2
+version:             0.0.3
 synopsis:            LeanCheck support for the Hspec test framework.
 description:
   LeanCheck support for the Hspec test framework.
@@ -49,7 +49,7 @@ source-repository head
 source-repository this
   type:           git
   location:       https://github.com/rudymatela/hspec-leancheck
-  tag:            v0.0.2
+  tag:            v0.0.3
 
 library
   exposed-modules:     Test.Hspec.LeanCheck

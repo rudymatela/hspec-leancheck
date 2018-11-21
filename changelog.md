@@ -2,8 +2,8 @@ Changelog for hspec-leancheck
 =============================
 
 
-upcoming
---------
+0.0.3
+-----
 
 * export the `prop` function;
 * export the `Property` type;
