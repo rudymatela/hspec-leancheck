@@ -25,15 +25,15 @@ src/Test/Hspec/LeanCheck: \
   mk/toplibs
 src/Test/Hspec/LeanCheck.o: \
   src/Test/Hspec/LeanCheck.hs
-tests/should.o: \
-  tests/should.hs \
+test/should.o: \
+  test/should.hs \
   src/Test/Hspec/LeanCheck.hs
-tests/should: \
-  tests/should.hs \
+test/should: \
+  test/should.hs \
   mk/toplibs
-tests/test.o: \
-  tests/test.hs \
+test/test.o: \
+  test/test.hs \
   src/Test/Hspec/LeanCheck.hs
-tests/test: \
-  tests/test.hs \
+test/test: \
+  test/test.hs \
   mk/toplibs
