@@ -49,6 +49,7 @@ module Test.Hspec.LeanCheck
   ( property
   , propertyFor
   , prop
+  , Property
   , module Test.LeanCheck
   )
 where
@@ -61,6 +62,7 @@ import System.IO.Unsafe (unsafePerformIO) -- LeanCheck is pure
 import qualified Test.HUnit.Lang as HUnit
 import Data.Maybe (fromMaybe)
 
+-- | A LeanCheck property.  See 'property', 'propertyFor' and 'prop'.
 data Property = Ok
               | Failed String
 

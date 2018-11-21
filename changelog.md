@@ -5,7 +5,8 @@ Changelog for hspec-leancheck
 upcoming
 --------
 
-* export `prop` function;
+* export the `prop` function;
+* export the `Property` type;
 * improvements in Haddock documentation;
 * improve tests of `hspec-leancheck` itself;
 * add this changelog.
