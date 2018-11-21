@@ -21,6 +21,7 @@ cabal-version:       1.18
 
 extra-doc-files: README.md
                , TODO.md
+               , changelog.md
 extra-source-files: .gitignore
                   , eg/minimal.hs
                   , eg/should.hs
