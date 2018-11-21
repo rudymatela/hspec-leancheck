@@ -19,9 +19,9 @@ all: mk/toplibs
 
 all-all: mk/All.o $(TESTS) $(EGS)
 
-test: $(patsubst %,%.test,$(TESTS)) test-sdist
+test: $(patsubst %,%.run,$(TESTS)) test-sdist
 
-%.test: %
+%.run: %
 	./$<
 
 eg: $(EGS)
