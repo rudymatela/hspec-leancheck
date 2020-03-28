@@ -16,11 +16,6 @@ mk/All.o: \
 mk/Toplibs.o: \
   src/Test/Hspec/LeanCheck.hs \
   mk/Toplibs.hs
-Setup.o: \
-  Setup.hs
-Setup: \
-  Setup.hs \
-  mk/toplibs
 src/Test/Hspec/LeanCheck: \
   mk/toplibs
 src/Test/Hspec/LeanCheck.o: \

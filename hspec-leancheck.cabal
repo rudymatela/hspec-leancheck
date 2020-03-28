@@ -32,6 +32,7 @@ extra-source-files: .gitignore
                   , mk/haddock-i
                   , mk/All.hs
                   , mk/Toplibs.hs
+                  , mk/install-on
                   , stack.yaml
                   , stack-lts-11.yaml
                   , test/sdist
