@@ -1,15 +1,11 @@
-# stack.yaml for hspec-leancheck
 resolver: lts-11.22
 
 packages:
 - .
 
 extra-deps:
+- leancheck-0.9.3
 - hspec-2.5.6
 - hspec-core-2.5.6
 - hspec-discover-2.5.6
 - QuickCheck-2.12.1
-
-flags: {}
-
-extra-package-dbs: []
