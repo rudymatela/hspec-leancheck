@@ -2,8 +2,8 @@ Changelog for hspec-leancheck
 =============================
 
 
-upcoming
---------
+0.0.4
+-----
 
 * improve build scripts
 
