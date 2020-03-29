@@ -58,10 +58,10 @@ matrix:
     env:                   GHCVER=8.4.4        CABALVER=2.2    STACKVER=lts-12.26
     addons: {apt: {packages: [ghc-8.4.4,  cabal-install-2.2],  sources: hvr-ghc}}
   - ghc: '8.2'
-    env:                   GHCVER=8.2.2        CABALVER=2.0    STACKVER=lts-11.22
+    env:                   GHCVER=8.2.2        CABALVER=2.0    STACKVER=lts-11.22  STACK_YAML=stack-lts-11.yaml
     addons: {apt: {packages: [ghc-8.2.2,  cabal-install-2.0],  sources: hvr-ghc}}
   - ghc: '8.0'
-    env:                   GHCVER=8.0.2        CABALVER=1.24   STACKVER=lts-9.21
+    env:                   GHCVER=8.0.2        CABALVER=1.24   STACKVER=lts-9.21   STACK_YAML=stack-lts-11.yaml
     addons: {apt: {packages: [ghc-8.0.2,  cabal-install-1.24], sources: hvr-ghc}}
   - ghc: '7.10'
     env:                   GHCVER=7.10.3       CABALVER=1.22
