@@ -40,7 +40,7 @@ test-sdist:
 test-via-cabal:
 	cabal configure --enable-tests --enable-benchmarks --ghc-options="$(GHCFLAGS) -O0"
 	cabal build
-	cabal test main
+	cabal test test
 
 
 test-via-stack:
