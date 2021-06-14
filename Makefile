@@ -12,7 +12,7 @@ EGS = \
 BENCHS =
 GHCIMPORTDIRS = src
 GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic)
-HADDOCKFLAGS = --no-print-missing-docs \
+HADDOCKFLAGS = \
   $(shell grep -q "Arch Linux" /etc/lsb-release && echo --optghc=-dynamic)
 
 all: mk/toplibs
