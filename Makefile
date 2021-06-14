@@ -44,7 +44,7 @@ test-via-cabal:
 
 
 test-via-stack:
-	stack test leancheck:test:main --ghc-options="$(GHCFLAGS) -O0" --system-ghc --no-install-ghc --no-terminal
+	stack test hspec-leancheck:test:test --ghc-options="$(GHCFLAGS) -O0" --system-ghc --no-install-ghc --no-terminal
 
 test-via-everything: test test-via-cabal test-via-stack
 
