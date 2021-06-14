@@ -37,7 +37,7 @@ extra-source-files: .gitignore
                   , stack-lts-11.yaml
                   , stack-lts-9.yaml
                   , test/sdist
-                  , .travis.yml
+                  , .github/workflows/build.yml
 tested-with: GHC==8.8
            , GHC==8.6
            , GHC==8.4

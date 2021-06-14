@@ -88,8 +88,8 @@ Further reading
 [Hspec]:     https://hspec.github.io/
 [LeanCheck]: https://github.com/rudymatela/leancheck
 
-[build-status]: https://travis-ci.org/rudymatela/hspec-leancheck.svg?branch=master
-[build-log]:    https://travis-ci.org/rudymatela/hspec-leancheck
+[build-log]:     https://github.com/rudymatela/hspec-leancheck/actions/workflows/build.yml
+[build-status]:  https://github.com/rudymatela/hspec-leancheck/actions/workflows/build.yml/badge.svg
 [hackage-version]: https://img.shields.io/hackage/v/hspec-leancheck.svg
 [hspec-leancheck-on-hackage]: https://hackage.haskell.org/package/hspec-leancheck
 [stackage-lts-badge]:                  http://stackage.org/package/hspec-leancheck/badge/lts
