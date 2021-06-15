@@ -92,8 +92,8 @@ Further reading
 [build-status]:  https://github.com/rudymatela/hspec-leancheck/actions/workflows/build.yml/badge.svg
 [hackage-version]: https://img.shields.io/hackage/v/hspec-leancheck.svg
 [hspec-leancheck-on-hackage]: https://hackage.haskell.org/package/hspec-leancheck
-[stackage-lts-badge]:                  http://stackage.org/package/hspec-leancheck/badge/lts
-[stackage-nightly-badge]:              http://stackage.org/package/hspec-leancheck/badge/nightly
-[hspec-leancheck-on-stackage]:         http://stackage.org/package/hspec-leancheck
-[hspec-leancheck-on-stackage-lts]:     http://stackage.org/lts/package/hspec-leancheck
-[hspec-leancheck-on-stackage-nightly]: http://stackage.org/nightly/package/hspec-leancheck
+[stackage-lts-badge]:                  https://stackage.org/package/hspec-leancheck/badge/lts
+[stackage-nightly-badge]:              https://stackage.org/package/hspec-leancheck/badge/nightly
+[hspec-leancheck-on-stackage]:         https://stackage.org/package/hspec-leancheck
+[hspec-leancheck-on-stackage-lts]:     https://stackage.org/lts/package/hspec-leancheck
+[hspec-leancheck-on-stackage-nightly]: https://stackage.org/nightly/package/hspec-leancheck
