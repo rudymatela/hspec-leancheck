@@ -2,6 +2,15 @@ Changelog for hspec-leancheck
 =============================
 
 
+upcoming
+--------
+
+* no actual code changes
+* minor fixes in the README (HTTPs badges)
+* replace Travis by GitHub as the CI
+* improve build and test scripts
+
+
 0.0.4
 -----
 
