@@ -6,7 +6,7 @@ description:
   LeanCheck support for the Hspec test framework.
   .
   This package can be used to incorporate LeanCheck tests into Hspec test
-  suites by means of the @Test.Hspec.LeanCheck.testProperty@ function.
+  suites.
   .
   Please see the Haddock documentation and README for more details.
 
@@ -38,12 +38,15 @@ extra-source-files: .gitignore
                   , stack-lts-9.yaml
                   , test/sdist
                   , .github/workflows/build.yml
-tested-with: GHC==8.8
+tested-with: GHC==9.0
+           , GHC==8.10
+           , GHC==8.8
            , GHC==8.6
            , GHC==8.4
            , GHC==8.2
            , GHC==8.0
            , GHC==7.10
+           , GHC==7.8
 
 
 source-repository head
