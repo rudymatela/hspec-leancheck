@@ -2,8 +2,8 @@ Changelog for hspec-leancheck
 =============================
 
 
-upcoming
---------
+0.0.6
+-----
 
 * no actual code changes
 * minor fixes in the README (HTTPs badges)
