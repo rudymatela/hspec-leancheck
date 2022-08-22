@@ -11,9 +11,20 @@ EGS = \
   eg/should
 BENCHS =
 GHCIMPORTDIRS = src
-GHCFLAGS = -O2 $(shell grep -q "Arch Linux" /etc/lsb-release && echo -dynamic)
+GHCFLAGS = -O2 \
+  $(shell grep -q "Arch Linux" /etc/lsb-release \
+       && echo -dynamic \
+               -package leancheck \
+               -package hspec \
+               -package hspec-core \
+               -package HUnit)
 HADDOCKFLAGS = \
-  $(shell grep -q "Arch Linux" /etc/lsb-release && echo --optghc=-dynamic)
+  $(shell grep -q "Arch Linux" /etc/lsb-release \
+       && echo '--optghc=-dynamic' \
+               '--optghc="-package leancheck"' \
+               '--optghc="-package hspec"' \
+               '--optghc="-package hspec-core"' \
+               '--optghc="-package HUnit"')
 
 all: mk/toplibs
 
