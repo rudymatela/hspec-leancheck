@@ -25,6 +25,7 @@ HADDOCKFLAGS = \
                '--optghc="-package hspec"' \
                '--optghc="-package hspec-core"' \
                '--optghc="-package HUnit"')
+INSTALL_DEPS = hspec hspec-core leancheck HUnit
 
 all: mk/toplibs
 
