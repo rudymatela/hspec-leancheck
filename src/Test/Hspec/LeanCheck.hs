@@ -63,8 +63,8 @@ import qualified Test.HUnit.Lang as HUnit
 import Data.Maybe (fromMaybe)
 
 -- | A LeanCheck property.  See 'property', 'propertyFor' and 'prop'.
-data Property = Ok
-              | Failed String
+data Property  =  Ok
+               |  Failed String
 
 -- | Like 'property' but allows setting the maximum number of tests.
 --
